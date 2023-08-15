@@ -1,26 +1,37 @@
 page 50400 BingMap
 {
-    ApplicationArea = All;
     Caption = 'BingMap';
     PageType = Card;
+    ApplicationArea = All;
+    UsageCategory = Lists;
 
     layout
     {
         area(content)
         {
-            group(General)
-            {
-                Caption = 'General';
-            }
-
-            usercontrol(Maps; Maps)
+            part(TruckPlansListPart; TruckPlansListPart)
             {
                 ApplicationArea = All;
-                trigger ControlReady()
+            }
+        }
+    }
+
+    actions
+    {
+        area(Processing)
+        {
+            action(StartTracking)
+            {
+                ApplicationArea = All;
+                Caption = 'Start Driving Current Selected Driver';
+                Promoted = true;
+                PromotedCategory = Process;
+                trigger OnAction()
                 begin
-                    CurrPage.Maps.ShowAddress();
+                    CurrPage.TruckPlansListPart.Page.StartTruck();
                 end;
             }
         }
     }
+
 }

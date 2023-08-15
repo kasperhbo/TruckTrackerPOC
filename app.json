@@ -10,7 +10,14 @@
   "help": "",
   "url": "",
   "logo": "",
-  "dependencies": [],
+  "dependencies": [
+    {
+      "id": "c17a045f-12f0-47eb-a214-bf62363952d3",
+      "name": "jsWorkbench",
+      "publisher": "Kasper de Bruin",
+      "version": "1.0.0.0"
+    }
+  ],
   "screenshots": [],
   "platform": "1.0.0.0",
   "application": "22.0.0.0",
